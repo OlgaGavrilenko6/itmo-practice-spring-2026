@@ -1,0 +1,2255 @@
+[
+  {
+    "req_text": "К общеобразовательным организациям относятся БНК (приложение Б)",
+    "object_entity": "БНК",
+    "subject_entity": "общеобразовательные организации",
+    "relation": "относится к",
+    "applicability": [],
+    "statement": {
+      "property": "принадлежность",
+      "operator": "==",
+      "value": "общеобразовательные организации",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "4.1",
+      "document": "СП 251.1325800.2016",
+      "chapter": "4.1"
+    }
+  },
+  {
+    "req_text": "К общеобразовательным организациям относятся СПШ",
+    "object_entity": "СПШ",
+    "subject_entity": "общеобразовательные организации",
+    "relation": "содержит",
+    "applicability": [],
+    "statement": {
+      "property": "принадлежность",
+      "operator": "==",
+      "value": "общеобразовательные организации",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "4.1",
+      "document": "СП 251.1325800.2016",
+      "chapter": "4.1"
+    }
+  },
+  {
+    "req_text": "К общеобразовательным организациям относятся ОО с углубленным изучением отдельных учебных предметов",
+    "object_entity": "общеобразовательные организации",
+    "subject_entity": "ОО с углубленным изучением отдельных учебных предметов",
+    "relation": "относится к",
+    "applicability": [],
+    "statement": {
+      "property": "тип",
+      "operator": "==",
+      "value": "ОО с углубленным изучением отдельных учебных предметов",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "4.1",
+      "document": "СП 251.1325800.2016",
+      "chapter": "4.1"
+    }
+  },
+  {
+    "req_text": "Вместимость зданий (расчетное число обучающихся) и организационно-педагогическую структуру ОО устанавливают заданием на проектирование",
+    "object_entity": "вместимость зданий, организационно-педагогическая структура ОО",
+    "subject_entity": "задание на проектирование",
+    "relation": "устанавливает",
+    "applicability": [],
+    "statement": {
+      "property": "установка",
+      "operator": "==",
+      "value": "заданием на проектирование",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "4.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "4.3"
+    }
+  },
+  {
+    "req_text": "Отдельно стоящие здания ОО не рекомендуется проектировать более чем на 1400 обучающихся",
+    "object_entity": "отдельно стоящие здания ОО",
+    "subject_entity": "отдельно стоящие здания ОО",
+    "relation": "является",
+    "applicability": [
+      {
+        "entity": "object_entity",
+        "property": "тип здания",
+        "operator": "==",
+        "value": "отдельно стоящее"
+      }
+    ],
+    "statement": {
+      "property": "количество обучающихся",
+      "operator": ">",
+      "value": "1400",
+      "type": "assumption"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "4.4",
+      "document": "СП 251.1325800.2016",
+      "chapter": "4.4"
+    }
+  },
+  {
+    "req_text": "При большем числе обучающихся ОО проектируют в виде комплекса зданий (блоков)",
+    "object_entity": "ОО",
+    "subject_entity": "ОО",
+    "relation": "является",
+    "applicability": [
+      {
+        "entity": "object_entity",
+        "property": "количество обучающихся",
+        "operator": ">",
+        "value": "пороговое значение"
+      }
+    ],
+    "statement": {
+      "property": "тип проектирования",
+      "operator": "==",
+      "value": "комплекс зданий (блоков)",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "4.4",
+      "document": "СП 251.1325800.2016",
+      "chapter": "4.4"
+    }
+  },
+  {
+    "req_text": "Комплекс зданий должен включать единый общешкольный центр",
+    "object_entity": "единый общешкольный центр",
+    "subject_entity": "комплекс зданий",
+    "relation": "включает",
+    "applicability": [],
+    "statement": {
+      "property": "наличие",
+      "operator": "==",
+      "value": "есть",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "4.4",
+      "document": "СП 251.1325800.2016",
+      "chapter": "4.4"
+    }
+  },
+  {
+    "req_text": "Комплекс зданий должен включать несколько учебных корпусов (блоков)",
+    "object_entity": "учебные корпуса",
+    "subject_entity": "комплекс зданий",
+    "relation": "включает",
+    "applicability": [],
+    "statement": {
+      "property": "количество",
+      "operator": ">=",
+      "value": "2",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "4.4",
+      "document": "СП 251.1325800.2016",
+      "chapter": "4.4"
+    }
+  },
+  {
+    "req_text": "Комплекс зданий должен включать учебные корпуса для начальных классов",
+    "object_entity": "учебные корпуса",
+    "subject_entity": "комплекс зданий",
+    "relation": "включает",
+    "applicability": [
+      {
+        "entity": "object_entity",
+        "property": "назначение",
+        "operator": "==",
+        "value": "начальные классы"
+      }
+    ],
+    "statement": {
+      "property": "наличие",
+      "operator": "==",
+      "value": "есть",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "4.4",
+      "document": "СП 251.1325800.2016",
+      "chapter": "4.4"
+    }
+  },
+  {
+    "req_text": "При проведении занятий по иностранному языку в 1–11 классах и трудовому обучению в 5–11 классах, физической культуре в 10–11 классах, по информатике и вычислительной технике, физике, химии и биологии (во время практических занятий) классную группу делят на две подгруппы",
+    "object_entity": "классная группа",
+    "subject_entity": "занятия",
+    "relation": "проводятся",
+    "applicability": [
+      {
+        "entity": "subject_entity",
+        "property": "предмет",
+        "operator": "==",
+        "value": "иностранный язык"
+      },
+      {
+        "entity": "subject_entity",
+        "property": "классы",
+        "operator": "∈",
+        "value": "1–11"
+      },
+      {
+        "entity": "subject_entity",
+        "property": "предмет",
+        "operator": "==",
+        "value": "трудовое обучение"
+      },
+      {
+        "entity": "subject_entity",
+        "property": "классы",
+        "operator": "∈",
+        "value": "5–11"
+      },
+      {
+        "entity": "subject_entity",
+        "property": "предмет",
+        "operator": "==",
+        "value": "физическая культура"
+      },
+      {
+        "entity": "subject_entity",
+        "property": "классы",
+        "operator": "∈",
+        "value": "10–11"
+      },
+      {
+        "entity": "subject_entity",
+        "property": "предмет",
+        "operator": "==",
+        "value": "информатика"
+      },
+      {
+        "entity": "subject_entity",
+        "property": "предмет",
+        "operator": "==",
+        "value": "вычислительная техника"
+      },
+      {
+        "entity": "subject_entity",
+        "property": "предмет",
+        "operator": "==",
+        "value": "физика"
+      },
+      {
+        "entity": "subject_entity",
+        "property": "предмет",
+        "operator": "==",
+        "value": "химия"
+      },
+      {
+        "entity": "subject_entity",
+        "property": "предмет",
+        "operator": "==",
+        "value": "биология"
+      },
+      {
+        "entity": "subject_entity",
+        "property": "тип занятия",
+        "operator": "==",
+        "value": "практические занятия"
+      }
+    ],
+    "statement": {
+      "property": "разделение",
+      "operator": "==",
+      "value": "на две подгруппы",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "4.6",
+      "document": "СП 251.1325800.2016",
+      "chapter": "4.6"
+    }
+  },
+  {
+    "req_text": "Допускается деление классной группы на две подгруппы при проведении занятий по проектной деятельности",
+    "object_entity": "подгруппы",
+    "subject_entity": "классная группа",
+    "relation": "делится на",
+    "applicability": [
+      {
+        "entity": "subject_entity",
+        "property": "тип занятий",
+        "operator": "==",
+        "value": "проектная деятельность"
+      }
+    ],
+    "statement": {
+      "property": "деление на подгруппы",
+      "operator": "==",
+      "value": "допускается",
+      "type": "assumption"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "4.6",
+      "document": "СП 251.1325800.2016",
+      "chapter": "4.6"
+    }
+  },
+  {
+    "req_text": "В общеобразовательных организациях с профильным обучением, углубленным изучением отдельных дисциплин для проведения практических работ допускается деление класса на несколько подгрупп, исходя из дифференцированных или интегрированных программ обучения, а также для организации групповых работ и самостоятельных занятий обучающихся по интересам",
+    "object_entity": "подгруппы",
+    "subject_entity": "общеобразовательная организация",
+    "relation": "содержит",
+    "applicability": [
+      {
+        "entity": "subject_entity",
+        "property": "тип обучения",
+        "operator": "==",
+        "value": "профильное"
+      },
+      {
+        "entity": "subject_entity",
+        "property": "углубленное изучение",
+        "operator": "==",
+        "value": "отдельных дисциплин"
+      }
+    ],
+    "statement": {
+      "property": "наличие",
+      "operator": "==",
+      "value": "есть",
+      "type": "assumption"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "4.6",
+      "document": "СП 251.1325800.2016",
+      "chapter": "4.6"
+    }
+  },
+  {
+    "req_text": "Структуру общеобразовательной организации определяют по [1]",
+    "object_entity": "структура общеобразовательной организации",
+    "subject_entity": "структура общеобразовательной организации",
+    "relation": "является",
+    "applicability": [],
+    "statement": {
+      "property": "метод определения",
+      "operator": "==",
+      "value": "по [1]",
+      "type": "requirement"
+    },
+    "external_refs": [
+      {
+        "document": "1",
+        "domain": ""
+      }
+    ],
+    "source": {
+      "paragraph": "5.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "5.3"
+    }
+  },
+  {
+    "req_text": "Радиусы обслуживания от дома до ОО определяют в соответствии с таблицей 10.1 СП 42.13330.2016",
+    "object_entity": "радиусы обслуживания",
+    "subject_entity": "дом",
+    "relation": "имеет",
+    "applicability": [],
+    "statement": {
+      "property": "определение",
+      "operator": "==",
+      "value": "по таблице 10.1 СП 42.13330.2016",
+      "type": "requirement"
+    },
+    "external_refs": [
+      {
+        "document": "СП 42.13330.2016",
+        "domain": ""
+      }
+    ],
+    "source": {
+      "paragraph": "5.4",
+      "document": "СП 251.1325800.2016",
+      "chapter": "5.4"
+    }
+  },
+  {
+    "req_text": "Радиусы обслуживания от дома до ОО определяют в соответствии с пунктом 2.1.2 СП 2.4.3648–20",
+    "object_entity": "радиусы обслуживания",
+    "subject_entity": "дом",
+    "relation": "имеет",
+    "applicability": [],
+    "statement": {
+      "property": "определение",
+      "operator": "==",
+      "value": "по пункту 2.1.2 СП 2.4.3648–20",
+      "type": "requirement"
+    },
+    "external_refs": [
+      {
+        "document": "СП 2.4.3648–20",
+        "domain": ""
+      }
+    ],
+    "source": {
+      "paragraph": "5.4",
+      "document": "СП 251.1325800.2016",
+      "chapter": "5.4"
+    }
+  },
+  {
+    "req_text": "ОО размещают на собственном земельном участке",
+    "object_entity": "ОО",
+    "subject_entity": "собственный земельный участок",
+    "relation": "содержит",
+    "applicability": [],
+    "statement": {
+      "property": "наличие",
+      "operator": "==",
+      "value": "есть",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.1",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.1"
+    }
+  },
+  {
+    "req_text": "ОО размещают в отдельно стоящем здании или комплексе зданий",
+    "object_entity": "здания",
+    "subject_entity": "ОО",
+    "relation": "размещают",
+    "applicability": [],
+    "statement": {
+      "property": "тип",
+      "operator": "∈",
+      "value": "отдельно стоящее здание, комплекс зданий",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.1",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.1"
+    }
+  },
+  {
+    "req_text": "На территории ОО не допускается размещение зданий и сооружений, функционально с ней не связанных",
+    "object_entity": "здания и сооружения",
+    "subject_entity": "территория ОО",
+    "relation": "содержит",
+    "applicability": [
+      {
+        "entity": "object_entity",
+        "property": "функциональная связь",
+        "operator": "!=",
+        "value": "связаны с ОО"
+      }
+    ],
+    "statement": {
+      "property": "наличие",
+      "operator": "!=",
+      "value": "есть",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.1",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.1"
+    }
+  },
+  {
+    "req_text": "Территория ОО должна представлять собой систему открытых площадок, разделенных по видам деятельности и возрастной принадлежности",
+    "object_entity": "система открытых площадок",
+    "subject_entity": "территория ОО",
+    "relation": "является",
+    "applicability": [
+      {
+        "entity": "object_entity",
+        "property": "вид деятельности",
+        "operator": "∈",
+        "value": "разделенные по видам деятельности"
+      },
+      {
+        "entity": "object_entity",
+        "property": "возрастная принадлежность",
+        "operator": "∈",
+        "value": "разделенные по возрастной принадлежности"
+      }
+    ],
+    "statement": {
+      "property": "структура",
+      "operator": "==",
+      "value": "система открытых площадок, разделенных по видам деятельности и возрастной принадлежности",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.2",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.2"
+    }
+  },
+  {
+    "req_text": "На открытых площадках должны размещаться оборудование, сооружения, малые архитектурные формы и озеленение с учетом функциональных и планировочных требований к каждой отдельной зоне",
+    "object_entity": "объекты размещения",
+    "subject_entity": "открытые площадки",
+    "relation": "размещаются",
+    "applicability": [],
+    "statement": {
+      "property": "размещение",
+      "operator": "==",
+      "value": "с учетом функциональных и планировочных требований к каждой отдельной зоне",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.2",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.2"
+    }
+  },
+  {
+    "req_text": "Размещение элементов на территории ОО должно осуществляться во взаимосвязи с окружающей селитебной территорией",
+    "object_entity": "элементы",
+    "subject_entity": "территория ОО",
+    "relation": "содержит",
+    "applicability": [],
+    "statement": {
+      "property": "размещение",
+      "operator": "==",
+      "value": "во взаимосвязи с окружающей селитебной территорией",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.2",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.2"
+    }
+  },
+  {
+    "req_text": "Физкультурно-спортивное оборудование и малые архитектурные формы должны соответствовать возрастным группам для исключения травматизма обучающихся",
+    "object_entity": "физкультурно-спортивное оборудование и малые архитектурные формы",
+    "subject_entity": "физкультурно-спортивное оборудование и малые архитектурные формы",
+    "relation": "является",
+    "applicability": [
+      {
+        "entity": "object_entity",
+        "property": "возрастные группы",
+        "operator": "==",
+        "value": "возрастным группам"
+      }
+    ],
+    "statement": {
+      "property": "соответствие",
+      "operator": "==",
+      "value": "возрастным группам",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.2",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.2"
+    }
+  },
+  {
+    "req_text": "Допускается располагать отдельные зоны территории ОО на отдельных земельных участках, находящихся в пешеходной доступности от земельного участка, на котором располагается здание ОО (не далее 300 м от здания для обучающихся начальной школы)",
+    "object_entity": "отдельные зоны территории ОО",
+    "subject_entity": "земельный участок",
+    "relation": "содержит",
+    "applicability": [
+      {
+        "entity": "object_entity",
+        "property": "расстояние до здания ОО",
+        "operator": "<=",
+        "value": "300 м"
+      },
+      {
+        "entity": "object_entity",
+        "property": "тип обучающихся",
+        "operator": "==",
+        "value": "начальная школа"
+      }
+    ],
+    "statement": {
+      "property": "расположение",
+      "operator": "==",
+      "value": "в пешеходной доступности",
+      "type": "assumption"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.3"
+    }
+  },
+  {
+    "req_text": "Допускается располагать отдельные зоны территории ОО на отдельных земельных участках, находящихся в пешеходной доступности от земельного участка, на котором располагается здание ОО (не далее 500 м для обучающихся основной и средней школы)",
+    "object_entity": "отдельные зоны территории ОО",
+    "subject_entity": "отдельные земельные участки",
+    "relation": "содержит",
+    "applicability": [
+      {
+        "entity": "object_entity",
+        "property": "расстояние до здания ОО",
+        "operator": "<=",
+        "value": "500 м"
+      },
+      {
+        "entity": "object_entity",
+        "property": "назначение участка",
+        "operator": "==",
+        "value": "основная и средняя школа"
+      }
+    ],
+    "statement": {
+      "property": "наличие",
+      "operator": "==",
+      "value": "есть",
+      "type": "assumption"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.3"
+    }
+  },
+  {
+    "req_text": "Допускается проектировать эксплуатируемые кровли",
+    "object_entity": "эксплуатируемые кровли",
+    "subject_entity": "эксплуатируемые кровли",
+    "relation": "является",
+    "applicability": [],
+    "statement": {
+      "property": "проектирование",
+      "operator": "==",
+      "value": "допускается",
+      "type": "assumption"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.3"
+    }
+  },
+  {
+    "req_text": "Допускается «поднимать» отдельные части здания над землей для устройства крытых площадок отдыха",
+    "object_entity": "крытые площадки отдыха",
+    "subject_entity": "здания",
+    "relation": "имеют",
+    "applicability": [],
+    "statement": {
+      "property": "наличие",
+      "operator": "==",
+      "value": "есть",
+      "type": "assumption"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.3"
+    }
+  },
+  {
+    "req_text": "Допускается размещение физкультурно-спортивных площадок на кровле здания ОО",
+    "object_entity": "физкультурно-спортивные площадки",
+    "subject_entity": "здание ОО",
+    "relation": "имеет",
+    "applicability": [],
+    "statement": {
+      "property": "наличие",
+      "operator": "==",
+      "value": "размещение на кровле",
+      "type": "assumption"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.3"
+    }
+  },
+  {
+    "req_text": "Не допускается размещение спортивных площадок на кровле учебных блоков",
+    "object_entity": "спортивные площадки",
+    "subject_entity": "учебные блоки",
+    "relation": "имеет",
+    "applicability": [],
+    "statement": {
+      "property": "расположение",
+      "operator": "!=",
+      "value": "на кровле учебных блоков",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.3"
+    }
+  },
+  {
+    "req_text": "Не допускается размещение спортивных площадок над помещениями с нормируемым уровнем шума и вибрации",
+    "object_entity": "спортивные площадки",
+    "subject_entity": "помещения с нормируемым уровнем шума и вибрации",
+    "relation": "размещение над",
+    "applicability": [
+      {
+        "entity": "subject_entity",
+        "property": "уровень шума и вибрации",
+        "operator": "==",
+        "value": "нормируемый"
+      }
+    ],
+    "statement": {
+      "property": "наличие",
+      "operator": "==",
+      "value": "отсутствует",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.3"
+    }
+  },
+  {
+    "req_text": "Ограждать спортивную площадку на кровле в соответствии с требованиями к ограждению спортивных площадок",
+    "object_entity": "спортивная площадка на кровле",
+    "subject_entity": "спортивная площадка на кровле",
+    "relation": "является",
+    "applicability": [],
+    "statement": {
+      "property": "наличие ограждения",
+      "operator": "==",
+      "value": "есть",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.3"
+    }
+  },
+  {
+    "req_text": "Высота ограждения спортивной площадки на кровле должна быть не менее 3 м без горизонтальных элементов",
+    "object_entity": "ограждение",
+    "subject_entity": "спортивная площадка на кровле",
+    "relation": "имеет",
+    "applicability": [],
+    "statement": {
+      "property": "высота",
+      "operator": ">=",
+      "value": "3 м",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.3"
+    }
+  },
+  {
+    "req_text": "Предусматривать удобную связь с физкультурно-спортивной зоной участка при размещении площадок на кровле",
+    "object_entity": "физкультурно-спортивная зона участка",
+    "subject_entity": "площадки на кровле",
+    "relation": "имеет",
+    "applicability": [
+      {
+        "entity": "subject_entity",
+        "property": "расположение",
+        "operator": "==",
+        "value": "на кровле"
+      }
+    ],
+    "statement": {
+      "property": "наличие удобной связи",
+      "operator": "==",
+      "value": "есть",
+      "type": "assumption"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.3"
+    }
+  },
+  {
+    "req_text": "Не допускается устройство вентиляционных каналов и иного оборудования в границах площадок, размещаемых на кровле",
+    "object_entity": "устройство вентиляционных каналов и иного оборудования",
+    "subject_entity": "площадка на кровле",
+    "relation": "размещает",
+    "applicability": [
+      {
+        "entity": "object_entity",
+        "property": "расположение",
+        "operator": "∈",
+        "value": "границы площадки на кровле"
+      }
+    ],
+    "statement": {
+      "property": "наличие",
+      "operator": "==",
+      "value": "отсутствует",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.3"
+    }
+  },
+  {
+    "req_text": "Не допускается устройство вентиляционных каналов и иного оборудования на проходах к площадкам, размещаемым на кровле",
+    "object_entity": "вентиляционные каналы и оборудование",
+    "subject_entity": "проходы к площадкам на кровле",
+    "relation": "имеют",
+    "applicability": [
+      {
+        "entity": "subject_entity",
+        "property": "расположение",
+        "operator": "==",
+        "value": "кровля"
+      }
+    ],
+    "statement": {
+      "property": "наличие",
+      "operator": "!=",
+      "value": "есть",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.3"
+    }
+  },
+  {
+    "req_text": "Предусматривать место для складирования снега в соответствии с пунктом 34 СанПиН 2.1.3684–21 для эксплуатации площадок в зимний период года",
+    "object_entity": "место для складирования снега",
+    "subject_entity": "площадки",
+    "relation": "имеют",
+    "applicability": [
+      {
+        "entity": "object_entity",
+        "property": "период эксплуатации",
+        "operator": "==",
+        "value": "зимний период года"
+      }
+    ],
+    "statement": {
+      "property": "наличие",
+      "operator": "==",
+      "value": "есть",
+      "type": "requirement"
+    },
+    "external_refs": [
+      {
+        "document": "пункт 34 СанПиН 2.1.3684–21",
+        "domain": ""
+      }
+    ],
+    "source": {
+      "paragraph": "6.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.3"
+    }
+  },
+  {
+    "req_text": "Предусматривать мероприятия по снеготаянию для эксплуатации площадок в зимний период года",
+    "object_entity": "мероприятия по снеготаянию",
+    "subject_entity": "площадки",
+    "relation": "имеют",
+    "applicability": [
+      {
+        "entity": "subject_entity",
+        "property": "период эксплуатации",
+        "operator": "==",
+        "value": "зимний период года"
+      }
+    ],
+    "statement": {
+      "property": "наличие",
+      "operator": "==",
+      "value": "есть",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.3"
+    }
+  },
+  {
+    "req_text": "Размещать инженерные сети на земельном участке ОО по допустимой кратчайшей траектории с соблюдением требований пункта 2.1.1 СП 2.4.3648–20",
+    "object_entity": "инженерные сети",
+    "subject_entity": "земельный участок ОО",
+    "relation": "имеет",
+    "applicability": [
+      {
+        "entity": "object_entity",
+        "property": "траектория",
+        "operator": "==",
+        "value": "допустимая кратчайшая"
+      }
+    ],
+    "statement": {
+      "property": "траектория",
+      "operator": "==",
+      "value": "допустимая кратчайшая",
+      "type": "requirement"
+    },
+    "external_refs": [
+      {
+        "document": "СП 2.4.3648–20",
+        "domain": ""
+      }
+    ],
+    "source": {
+      "paragraph": "6.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.3"
+    }
+  },
+  {
+    "req_text": "Размещать инженерные сети на земельном участке ОО по допустимой кратчайшей траектории с соблюдением требований СП 31.13330",
+    "object_entity": "инженерные сети",
+    "subject_entity": "земельный участок ОО",
+    "relation": "имеет",
+    "applicability": [],
+    "statement": {
+      "property": "размещение",
+      "operator": "==",
+      "value": "по допустимой кратчайшей траектории",
+      "type": "requirement"
+    },
+    "external_refs": [
+      {
+        "document": "СП 31.13330",
+        "domain": ""
+      }
+    ],
+    "source": {
+      "paragraph": "6.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.3"
+    }
+  },
+  {
+    "req_text": "Размещать инженерные сети на земельном участке ОО по допустимой кратчайшей траектории с соблюдением требований СП 32.13330",
+    "object_entity": "инженерные сети",
+    "subject_entity": "земельный участок ОО",
+    "relation": "имеет",
+    "applicability": [
+      {
+        "entity": "object_entity",
+        "property": "траектория",
+        "operator": "==",
+        "value": "кратчайшая допустимая"
+      }
+    ],
+    "statement": {
+      "property": "траектория",
+      "operator": "==",
+      "value": "кратчайшая допустимая",
+      "type": "requirement"
+    },
+    "external_refs": [
+      {
+        "document": "СП 32.13330",
+        "domain": ""
+      }
+    ],
+    "source": {
+      "paragraph": "6.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.3"
+    }
+  },
+  {
+    "req_text": "Размещать инженерные сети на земельном участке ОО по допустимой кратчайшей траектории с соблюдением требований СП 62.13330",
+    "object_entity": "инженерные сети",
+    "subject_entity": "земельный участок ОО",
+    "relation": "имеет",
+    "applicability": [
+      {
+        "entity": "object_entity",
+        "property": "расположение",
+        "operator": "==",
+        "value": "земельный участок ОО"
+      }
+    ],
+    "statement": {
+      "property": "способ размещения",
+      "operator": "==",
+      "value": "допустимая кратчайшая траектория",
+      "type": "requirement"
+    },
+    "external_refs": [
+      {
+        "document": "СП 62.13330",
+        "domain": ""
+      }
+    ],
+    "source": {
+      "paragraph": "6.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.3"
+    }
+  },
+  {
+    "req_text": "Размещать инженерные сети на земельном участке ОО по допустимой кратчайшей траектории с соблюдением требований СП 124.13330",
+    "object_entity": "инженерные сети",
+    "subject_entity": "земельный участок ОО",
+    "relation": "имеет",
+    "applicability": [
+      {
+        "entity": "object_entity",
+        "property": "расположение",
+        "operator": "==",
+        "value": "земельный участок ОО"
+      }
+    ],
+    "statement": {
+      "property": "траектория",
+      "operator": "==",
+      "value": "допустимая кратчайшая",
+      "type": "requirement"
+    },
+    "external_refs": [
+      {
+        "document": "СП 124.13330",
+        "domain": ""
+      }
+    ],
+    "source": {
+      "paragraph": "6.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.3"
+    }
+  },
+  {
+    "req_text": "Не допускается размещение инженерных сетей под игровыми и спортивными площадками",
+    "object_entity": "инженерные сети",
+    "subject_entity": "игровые и спортивные площадки",
+    "relation": "имеет",
+    "applicability": [
+      {
+        "entity": "object_entity",
+        "property": "расположение",
+        "operator": "==",
+        "value": "под игровыми и спортивными площадками"
+      }
+    ],
+    "statement": {
+      "property": "размещение",
+      "operator": "!=",
+      "value": "размещение под игровыми и спортивными площадками",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.3"
+    }
+  },
+  {
+    "req_text": "Не допускается устройство смотровых колодцев на площадках для обучающихся",
+    "object_entity": "смотровые колодцы",
+    "subject_entity": "площадки для обучающихся",
+    "relation": "имеют",
+    "applicability": [],
+    "statement": {
+      "property": "наличие",
+      "operator": "!=",
+      "value": "есть",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.3"
+    }
+  },
+  {
+    "req_text": "Озеленение территории ОО выполняют в соответствии с пунктом 2.2.1 СП 2.4.3648–20.",
+    "object_entity": "озеленение территории ОО",
+    "subject_entity": "озеленение территории ОО",
+    "relation": "является",
+    "applicability": [],
+    "statement": {
+      "property": "выполнение",
+      "operator": "==",
+      "value": "в соответствии с пунктом 2.2.1 СП 2.4.3648–20",
+      "type": "requirement"
+    },
+    "external_refs": [
+      {
+        "document": "СП 2.4.3648–20",
+        "domain": ""
+      }
+    ],
+    "source": {
+      "paragraph": "6.4",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.4"
+    }
+  },
+  {
+    "req_text": "Стоянка автомобилей для персонала проектируется за границами участка в соответствии с требованиями СП 113.13330, СП 3.13130, СП 59.13330, СП 2.4.3648, СанПиН 2.1.3684, СанПиН 2.2.1/2.1.1.1200",
+    "object_entity": "стоянка автомобилей для персонала",
+    "subject_entity": "участок",
+    "relation": "расположена за границами",
+    "applicability": [
+      {
+        "entity": "object_entity",
+        "property": "расположение",
+        "operator": "==",
+        "value": "за границами участка"
+      }
+    ],
+    "statement": {
+      "property": "расположение",
+      "operator": "==",
+      "value": "за границами участка",
+      "type": "requirement"
+    },
+    "external_refs": [
+      {
+        "document": "СП 113.13330",
+        "domain": ""
+      },
+      {
+        "document": "СП 3.13130",
+        "domain": ""
+      },
+      {
+        "document": "СП 59.13330",
+        "domain": ""
+      },
+      {
+        "document": "СП 2.4.3648",
+        "domain": ""
+      },
+      {
+        "document": "СанПиН 2.1.3684",
+        "domain": ""
+      },
+      {
+        "document": "СанПиН 2.2.1/2.1.1.1200",
+        "domain": ""
+      }
+    ],
+    "source": {
+      "paragraph": "6.4.2",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.4.2"
+    }
+  },
+  {
+    "req_text": "Рядом с границами участка рекомендуется предусматривать места для кратковременной остановки автотранспорта родителей, привозящих детей в школу",
+    "object_entity": "места для кратковременной остановки автотранспорта",
+    "subject_entity": "участок",
+    "relation": "содержит",
+    "applicability": [
+      {
+        "entity": "object_entity",
+        "property": "расположение",
+        "operator": "==",
+        "value": "рядом с границами участка"
+      }
+    ],
+    "statement": {
+      "property": "наличие",
+      "operator": "==",
+      "value": "есть",
+      "type": "assumption"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.4.2",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.4.2"
+    }
+  },
+  {
+    "req_text": "Количество мест для кратковременной остановки определяется по заданию на проектирование",
+    "object_entity": "количество мест для кратковременной остановки",
+    "subject_entity": "задание на проектирование",
+    "relation": "определяет",
+    "applicability": [],
+    "statement": {
+      "property": "количество",
+      "operator": "==",
+      "value": "по заданию на проектирование",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.4.2",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.4.2"
+    }
+  },
+  {
+    "req_text": "Рекомендуется принимать одно место для кратковременной остановки на 100 обучающихся",
+    "object_entity": "место для кратковременной остановки",
+    "subject_entity": "обучающиеся",
+    "relation": "имеет",
+    "applicability": [
+      {
+        "entity": "subject_entity",
+        "property": "количество",
+        "operator": "==",
+        "value": "100"
+      }
+    ],
+    "statement": {
+      "property": "количество",
+      "operator": "==",
+      "value": "1",
+      "type": "assumption"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.4.2",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.4.2"
+    }
+  },
+  {
+    "req_text": "Не менее одного увеличенного места для МГН должно быть предусмотрено",
+    "object_entity": "увеличленное место для МГН",
+    "subject_entity": "увеличленное место для МГН",
+    "relation": "является",
+    "applicability": [],
+    "statement": {
+      "property": "количество",
+      "operator": ">=",
+      "value": "1",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.4.2",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.4.2"
+    }
+  },
+  {
+    "req_text": "Место кратковременной остановки для посадки–высадки детей должно быть отделено от площадок на территории ОО зелеными насаждениями – кустарником с высокой плотной кроной",
+    "object_entity": "площадки на территории ОО",
+    "subject_entity": "место кратковременной остановки для посадки–высадки детей",
+    "relation": "отделяет",
+    "applicability": [
+      {
+        "entity": "object_entity",
+        "property": "тип отделения",
+        "operator": "==",
+        "value": "зеленые насаждения – кустарник с высокой плотной кроной"
+      }
+    ],
+    "statement": {
+      "property": "тип отделения",
+      "operator": "==",
+      "value": "зеленые насаждения – кустарник с высокой плотной кроной",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.4.2",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.4.2"
+    }
+  },
+  {
+    "req_text": "Вдоль места кратковременной остановки проектируется тротуар в соответствии с СП 140.13330, сопряженный с пешеходными путями, ведущими на территорию и к главному входу в здание ОО",
+    "object_entity": "тротуар",
+    "subject_entity": "место кратковременной остановки",
+    "relation": "имеет",
+    "applicability": [
+      {
+        "entity": "object_entity",
+        "property": "сопряжение",
+        "operator": "==",
+        "value": "с пешеходными путями, ведущими на территорию и к главному входу"
+      }
+    ],
+    "statement": {
+      "property": "наличие",
+      "operator": "==",
+      "value": "есть",
+      "type": "requirement"
+    },
+    "external_refs": [
+      {
+        "document": "СП 140.13330",
+        "domain": ""
+      }
+    ],
+    "source": {
+      "paragraph": "6.4.2",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.4.2"
+    }
+  },
+  {
+    "req_text": "Места кратковременной остановки для посадки–высадки детей размещают за ограждением основной территории ОО",
+    "object_entity": "места кратковременной остановки для посадки-высадки детей",
+    "subject_entity": "основная территория ОО",
+    "relation": "имеет",
+    "applicability": [
+      {
+        "entity": "object_entity",
+        "property": "расположение",
+        "operator": "==",
+        "value": "за ограждением основной территории ОО"
+      }
+    ],
+    "statement": {
+      "property": "расположение",
+      "operator": "==",
+      "value": "за ограждением основной территории ОО",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.4.2",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.4.2"
+    }
+  },
+  {
+    "req_text": "При размещении парковочных мест на стоянках автомобилей следует предусматривать места для хранения (стоянки) электромобилей, оборудованные зарядными устройствами, в соответствии с требованиями СП 113.13330",
+    "object_entity": "места для хранения электромобилей",
+    "subject_entity": "стоянка автомобилей",
+    "relation": "содержит",
+    "applicability": [],
+    "statement": {
+      "property": "наличие",
+      "operator": "==",
+      "value": "места для хранения электромобилей с зарядными устройствами",
+      "type": "assumption"
+    },
+    "external_refs": [
+      {
+        "document": "СП 113.13330",
+        "domain": ""
+      }
+    ],
+    "source": {
+      "paragraph": "6.4.2",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.4.2"
+    }
+  },
+  {
+    "req_text": "Расчетную потребность парковочных мест, оборудованных зарядными устройствами, следует устанавливать в соответствии с заданием на проектирование",
+    "object_entity": "расчетная потребность парковочных мест, оборудованных зарядными устройствами",
+    "subject_entity": "задание на проектирование",
+    "relation": "устанавливает",
+    "applicability": [],
+    "statement": {
+      "property": "расчетная потребность",
+      "operator": "==",
+      "value": "установлена",
+      "type": "assumption"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.4.2",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.4.2"
+    }
+  },
+  {
+    "req_text": "Расчетная потребность парковочных мест, оборудованных зарядными устройствами, не должна быть менее установленных СП 118.13330",
+    "object_entity": "расчетная потребность парковочных мест, оборудованных зарядными устройствами",
+    "subject_entity": "расчетная потребность парковочных мест, оборудованных зарядными устройствами",
+    "relation": "является",
+    "applicability": [],
+    "statement": {
+      "property": "значение",
+      "operator": ">=",
+      "value": "установленных СП 118.13330",
+      "type": "requirement"
+    },
+    "external_refs": [
+      {
+        "document": "СП 118.13330",
+        "domain": ""
+      }
+    ],
+    "source": {
+      "paragraph": "6.4.2",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.4.2"
+    }
+  },
+  {
+    "req_text": "Территория должна быть ограждена",
+    "object_entity": "ограждение",
+    "subject_entity": "территория",
+    "relation": "имеет",
+    "applicability": [],
+    "statement": {
+      "property": "наличие",
+      "operator": "==",
+      "value": "есть",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.4.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.4.3"
+    }
+  },
+  {
+    "req_text": "Отсутствие ограждения допускается только со стороны стен здания, непосредственно прилегающих к проезжей части улицы или пешеходному тротуару",
+    "object_entity": "ограждение",
+    "subject_entity": "стены здания",
+    "relation": "имеют",
+    "applicability": [
+      {
+        "entity": "subject_entity",
+        "property": "расположение",
+        "operator": "∈",
+        "value": "[\"проезжая часть улицы\", \"пешеходный тротуар\"]"
+      }
+    ],
+    "statement": {
+      "property": "наличие",
+      "operator": "==",
+      "value": "отсутствует",
+      "type": "assumption"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.4.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.4.3"
+    }
+  },
+  {
+    "req_text": "Должен быть обеспечен проезд пожарных автомобилей со всех сторон здания в соответствии с требованиями 7.3.5",
+    "object_entity": "проезд пожарных автомобилей",
+    "subject_entity": "здание",
+    "relation": "имеет",
+    "applicability": [
+      {
+        "entity": "object_entity",
+        "property": "стороны",
+        "operator": "==",
+        "value": "все"
+      }
+    ],
+    "statement": {
+      "property": "наличие",
+      "operator": "==",
+      "value": "есть",
+      "type": "requirement"
+    },
+    "external_refs": [
+      {
+        "document": "7.3.5",
+        "domain": ""
+      }
+    ],
+    "source": {
+      "paragraph": "6.4.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.4.3"
+    }
+  },
+  {
+    "req_text": "Устройство пожарного проезда допускается по любому укрепленному основанию, в том числе газону, газонным решеткам, тротуарам, игровым и спортивным площадкам, свободным от оборудования и неогороженным",
+    "object_entity": "пожарный проезд",
+    "subject_entity": "пожарный проезд",
+    "relation": "является",
+    "applicability": [],
+    "statement": {
+      "property": "основание",
+      "operator": "==",
+      "value": "укрепленное",
+      "type": "assumption"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.4.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.4.3"
+    }
+  },
+  {
+    "req_text": "При устройстве пожарного проезда должны соблюдаться требования раздела 8 СП 4.13130.2013",
+    "object_entity": "пожарный проезд",
+    "subject_entity": "пожарный проезд",
+    "relation": "является",
+    "applicability": [],
+    "statement": {
+      "property": "соблюдение требований",
+      "operator": "==",
+      "value": "требования раздела 8 СП 4.13130.2013",
+      "type": "requirement"
+    },
+    "external_refs": [
+      {
+        "document": "СП 4.13130.2013",
+        "domain": ""
+      }
+    ],
+    "source": {
+      "paragraph": "6.4.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.4.3"
+    }
+  },
+  {
+    "req_text": "Проезд к зданию ОО должен быть оборудован устройствами, исключающими возможность развития транспортными средствами высокой скорости.",
+    "object_entity": "устройства",
+    "subject_entity": "проезд к зданию ОО",
+    "relation": "оборудован",
+    "applicability": [],
+    "statement": {
+      "property": "возможность развития транспортными средствами высокой скорости",
+      "operator": "==",
+      "value": "отсутствует",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.4.4",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.4.4"
+    }
+  },
+  {
+    "req_text": "Искусственное освещение и инсоляцию территории ОО предусматривают в соответствии с требованиями таблицы 5.56 СанПиН 1.2.3685–21",
+    "object_entity": "искусственное освещение и инсоляция",
+    "subject_entity": "территория ОО",
+    "relation": "имеет",
+    "applicability": [],
+    "statement": {
+      "property": "предусмотрение",
+      "operator": "==",
+      "value": "в соответствии с таблицей 5.56 СанПиН 1.2.3685–21",
+      "type": "requirement"
+    },
+    "external_refs": [
+      {
+        "document": "СанПиН 1.2.3685–21",
+        "domain": ""
+      }
+    ],
+    "source": {
+      "paragraph": "6.4.5",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.4.5"
+    }
+  },
+  {
+    "req_text": "Искусственное освещение и инсоляцию территории ОО предусматривают в соответствии с требованиями таблицы 5.60 СанПиН 1.2.3685–21",
+    "object_entity": "искусственное освещение и инсоляция",
+    "subject_entity": "территория ОО",
+    "relation": "имеет",
+    "applicability": [],
+    "statement": {
+      "property": "предусмотрение",
+      "operator": "==",
+      "value": "в соответствии с таблицей 5.60 СанПиН 1.2.3685–21",
+      "type": "requirement"
+    },
+    "external_refs": [
+      {
+        "document": "СанПиН 1.2.3685–21",
+        "domain": ""
+      }
+    ],
+    "source": {
+      "paragraph": "6.4.5",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.4.5"
+    }
+  },
+  {
+    "req_text": "При главном входе рекомендуется предусматривать площадку с твердым покрытием (асфальтом, тротуарной плиткой и др.) из расчета 0,3 м2 на одного человека для проведения общешкольных мероприятий, экстренной эвакуации из здания",
+    "object_entity": "площадка",
+    "subject_entity": "главный вход",
+    "relation": "имеет",
+    "applicability": [
+      {
+        "entity": "object_entity",
+        "property": "тип покрытия",
+        "operator": "==",
+        "value": "твердое (асфальт, тротуарная плитка и др.)"
+      }
+    ],
+    "statement": {
+      "property": "площадь на человека",
+      "operator": ">=",
+      "value": "0.3 м2",
+      "type": "assumption"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.4.7",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.4.7"
+    }
+  },
+  {
+    "req_text": "Габариты площадки должны обеспечивать возможность построения обучающихся по классам для проведения торжественных линеек",
+    "object_entity": "площадка",
+    "subject_entity": "площадка",
+    "relation": "является",
+    "applicability": [],
+    "statement": {
+      "property": "габариты",
+      "operator": "==",
+      "value": "обеспечивают возможность построения обучающихся по классам для проведения торжественных линеек",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.4.7",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.4.7"
+    }
+  },
+  {
+    "req_text": "При отсутствии возможности обеспечить необходимую площадь в качестве торжественной зоны для устройства общешкольных линеек допускается использовать физкультурные площадки соответствующих габаритов",
+    "object_entity": "физкультурная площадка",
+    "subject_entity": "школа",
+    "relation": "содержит",
+    "applicability": [
+      {
+        "entity": "subject_entity",
+        "property": "возможность обеспечить необходимую площадь",
+        "operator": "!=",
+        "value": "есть"
+      }
+    ],
+    "statement": {
+      "property": "использование",
+      "operator": "==",
+      "value": "допускается использовать физкультурные площадки соответствующих габаритов",
+      "type": "assumption"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "6.4.7",
+      "document": "СП 251.1325800.2016",
+      "chapter": "6.4.7"
+    }
+  },
+  {
+    "req_text": "Обязательной является максимальная изоляция группы помещений для обучающихся начальной школы от группы помещений для обучающихся основной и средней школы",
+    "object_entity": "группа помещений для обучающихся основной и средней школы",
+    "subject_entity": "группа помещений для обучающихся начальной школы",
+    "relation": "изолирована от",
+    "applicability": [],
+    "statement": {
+      "property": "уровень изоляции",
+      "operator": "==",
+      "value": "максимальный",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "7.1.2",
+      "document": "СП 251.1325800.2016",
+      "chapter": "7.1.2"
+    }
+  },
+  {
+    "req_text": "Отдельно стоящие корпуса следует проектировать полностью автономными, если между ними не предусмотрен отапливаемый переход",
+    "object_entity": "отдельно стоящие корпуса",
+    "subject_entity": "отдельно стоящие корпуса",
+    "relation": "является",
+    "applicability": [
+      {
+        "entity": "subject_entity",
+        "property": "наличие перехода",
+        "operator": "!=",
+        "value": "отапливаемый переход"
+      }
+    ],
+    "statement": {
+      "property": "автономность",
+      "operator": "==",
+      "value": "полностью автономные",
+      "type": "assumption"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "7.1.2",
+      "document": "СП 251.1325800.2016",
+      "chapter": "7.1.2"
+    }
+  },
+  {
+    "req_text": "При обосновании допускается выносить в отдельный корпус без соединения отапливаемым переходом блок спортивных помещений и бассейн",
+    "object_entity": "блок спортивных помещений и бассейн",
+    "subject_entity": "ОО",
+    "relation": "имеет",
+    "applicability": [],
+    "statement": {
+      "property": "тип соединения с корпусом",
+      "operator": "!=",
+      "value": "отапливаемый переход",
+      "type": "assumption"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "7.1.2",
+      "document": "СП 251.1325800.2016",
+      "chapter": "7.1.2"
+    }
+  },
+  {
+    "req_text": "Объемно-планировочная структура здания должна соответствовать назначению организации",
+    "object_entity": "объемно-планировочная структура здания",
+    "subject_entity": "организация",
+    "relation": "должна соответствовать",
+    "applicability": [],
+    "statement": {
+      "property": "соответствие",
+      "operator": "==",
+      "value": "назначению организации",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "7.1.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "7.1.3"
+    }
+  },
+  {
+    "req_text": "Объемно-планировочная структура здания должна соответствовать его специфике",
+    "object_entity": "объемно-планировочная структура здания",
+    "subject_entity": "здания",
+    "relation": "является",
+    "applicability": [],
+    "statement": {
+      "property": "соответствие",
+      "operator": "==",
+      "value": "специфике здания",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "7.1.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "7.1.3"
+    }
+  },
+  {
+    "req_text": "Объемно-планировочная структура здания должна соответствовать комфортным условиям эксплуатации, включая связь с участком ОО",
+    "object_entity": "объемно-планировочная структура здания",
+    "subject_entity": "объемно-планировочная структура здания",
+    "relation": "является",
+    "applicability": [
+      {
+        "entity": "object_entity",
+        "property": "связь с участком",
+        "operator": "==",
+        "value": "участок ОО"
+      }
+    ],
+    "statement": {
+      "property": "соответствие",
+      "operator": "==",
+      "value": "комфортные условия эксплуатации",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "7.1.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "7.1.3"
+    }
+  },
+  {
+    "req_text": "Помещения зданий ОО оборудуются согласно СП 2.4.3648",
+    "object_entity": "помещения зданий ОО",
+    "subject_entity": "помещения зданий ОО",
+    "relation": "является",
+    "applicability": [],
+    "statement": {
+      "property": "оборудование",
+      "operator": "==",
+      "value": "согласно СП 2.4.3648",
+      "type": "requirement"
+    },
+    "external_refs": [
+      {
+        "document": "СП 2.4.3648",
+        "domain": ""
+      }
+    ],
+    "source": {
+      "paragraph": "7.1.7",
+      "document": "СП 251.1325800.2016",
+      "chapter": "7.1.7"
+    }
+  },
+  {
+    "req_text": "Помещения зданий ОО оборудуются согласно СанПиН 1.2.3685",
+    "object_entity": "помещения зданий ОО",
+    "subject_entity": "помещения зданий ОО",
+    "relation": "является",
+    "applicability": [],
+    "statement": {
+      "property": "оборудование",
+      "operator": "==",
+      "value": "согласно СанПиН 1.2.3685",
+      "type": "requirement"
+    },
+    "external_refs": [
+      {
+        "document": "СанПиН 1.2.3685",
+        "domain": ""
+      }
+    ],
+    "source": {
+      "paragraph": "7.1.7",
+      "document": "СП 251.1325800.2016",
+      "chapter": "7.1.7"
+    }
+  },
+  {
+    "req_text": "Внутренняя среда, доступная для МГН, должна проектироваться согласно подразделам 6.1–6.2, 8.2 СП 59.13330.2020",
+    "object_entity": "внутренняя среда",
+    "subject_entity": "внутренняя среда",
+    "relation": "является",
+    "applicability": [
+      {
+        "entity": "object_entity",
+        "property": "доступность для МГН",
+        "operator": "==",
+        "value": "да"
+      }
+    ],
+    "statement": {
+      "property": "проектирование",
+      "operator": "==",
+      "value": "по подразделам 6.1–6.2, 8.2 СП 59.13330.2020",
+      "type": "requirement"
+    },
+    "external_refs": [
+      {
+        "document": "СП 59.13330.2020",
+        "domain": ""
+      }
+    ],
+    "source": {
+      "paragraph": "7.1.9",
+      "document": "СП 251.1325800.2016",
+      "chapter": "7.1.9"
+    }
+  },
+  {
+    "req_text": "Тактильно-контрастные указатели, система средств информационной поддержки и предупреждения об опасности (включая визуальные, звуковые и тактильные средства отображения информации) в зданиях ОО применяются по заданию на проектирование",
+    "object_entity": "тактильно-контрастные указатели и системы информационной поддержки и предупреждения об опасности",
+    "subject_entity": "здания ОО",
+    "relation": "содержат",
+    "applicability": [
+      {
+        "entity": "subject_entity",
+        "property": "тип задания",
+        "operator": "==",
+        "value": "на проектирование"
+      }
+    ],
+    "statement": {
+      "property": "применение",
+      "operator": "==",
+      "value": "есть",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "7.1.9",
+      "document": "СП 251.1325800.2016",
+      "chapter": "7.1.9"
+    }
+  },
+  {
+    "req_text": "Установку контрастных полос на проступях краевых ступеней лестничных маршей рекомендуется выполнять из основного материала покрытия лестничных маршей",
+    "object_entity": "контрастные полосы",
+    "subject_entity": "лестничные марши",
+    "relation": "имеют",
+    "applicability": [
+      {
+        "entity": "object_entity",
+        "property": "расположение",
+        "operator": "==",
+        "value": "проступи краевых ступеней"
+      },
+      {
+        "entity": "object_entity",
+        "property": "материал",
+        "operator": "==",
+        "value": "основной материал покрытия лестничных маршей"
+      }
+    ],
+    "statement": {
+      "property": "материал",
+      "operator": "==",
+      "value": "основной материал покрытия лестничных маршей",
+      "type": "assumption"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "7.1.9",
+      "document": "СП 251.1325800.2016",
+      "chapter": "7.1.9"
+    }
+  },
+  {
+    "req_text": "Вход в здание, доступный для МГН, следует оборудовать кнопкой вызова персонала, размещенной на высоте 0,85–1,1 м",
+    "object_entity": "кнопка вызова персонала",
+    "subject_entity": "вход в здание",
+    "relation": "имеет",
+    "applicability": [
+      {
+        "entity": "subject_entity",
+        "property": "доступность",
+        "operator": "==",
+        "value": "для МГН"
+      }
+    ],
+    "statement": {
+      "property": "высота размещения",
+      "operator": "∈",
+      "value": "0,85–1,1 м",
+      "type": "assumption"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "7.1.9",
+      "document": "СП 251.1325800.2016",
+      "chapter": "7.1.9"
+    }
+  },
+  {
+    "req_text": "Учебные помещения группируются в учебные секции, содержащие не более четырех учебных помещений со спальнями и игровыми (а также при наличии в задании на проектирование комнатами отдыха) и санузлами для 1-х классов",
+    "object_entity": "учебные секции",
+    "subject_entity": "учебные помещения",
+    "relation": "содержит",
+    "applicability": [
+      {
+        "entity": "object_entity",
+        "property": "количество учебных помещений",
+        "operator": "<=",
+        "value": "4"
+      }
+    ],
+    "statement": {
+      "property": "количество учебных помещений",
+      "operator": "<=",
+      "value": "4",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "7.2.1.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "7.2.1.3"
+    }
+  },
+  {
+    "req_text": "Учебные помещения группируются в учебные секции, содержащие не более восьми учебных помещений с рекреациями и санузлами для 2–4 классов",
+    "object_entity": "учебные секции",
+    "subject_entity": "учебные помещения",
+    "relation": "содержит",
+    "applicability": [
+      {
+        "entity": "object_entity",
+        "property": "количество помещений",
+        "operator": "<=",
+        "value": "8"
+      }
+    ],
+    "statement": {
+      "property": "количество помещений",
+      "operator": "<=",
+      "value": "8",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "7.2.1.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "7.2.1.3"
+    }
+  },
+  {
+    "req_text": "Учебные помещения группируются в учебные секции, содержащие комнату труда для 2–4 классов",
+    "object_entity": "учебные секции",
+    "subject_entity": "учебные помещения",
+    "relation": "содержит",
+    "applicability": [
+      {
+        "entity": "object_entity",
+        "property": "классы",
+        "operator": "∈",
+        "value": "2–4 классы"
+      }
+    ],
+    "statement": {
+      "property": "наличие комнаты труда",
+      "operator": "==",
+      "value": "есть",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "7.2.1.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "7.2.1.3"
+    }
+  },
+  {
+    "req_text": "Учебные помещения группируются в учебные секции, содержащие универсальное помещение для групп продленного дня для 2–4 классов",
+    "object_entity": "учебные секции",
+    "subject_entity": "учебные помещения",
+    "relation": "содержит",
+    "applicability": [],
+    "statement": {
+      "property": "наличие",
+      "operator": "==",
+      "value": "универсальное помещение для групп продленного дня для 2–4 классов",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "7.2.1.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "7.2.1.3"
+    }
+  },
+  {
+    "req_text": "Учебные помещения группируются в учебные секции, содержащие учебные классы-кабинеты, лаборатории, соответствующие рекреационные помещения и санузлы для 5–11 классов",
+    "object_entity": "учебные секции",
+    "subject_entity": "учебные помещения",
+    "relation": "содержит",
+    "applicability": [
+      {
+        "entity": "object_entity",
+        "property": "состав",
+        "operator": "∈",
+        "value": "учебные классы-кабинеты, лаборатории, соответствующие рекреационные помещения и санузлы"
+      },
+      {
+        "entity": "object_entity",
+        "property": "классы",
+        "operator": "∈",
+        "value": "5–11 классы"
+      }
+    ],
+    "statement": {
+      "property": "состав",
+      "operator": "==",
+      "value": "учебные классы-кабинеты, лаборатории, соответствующие рекреационные помещения и санузлы",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "7.2.1.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "7.2.1.3"
+    }
+  },
+  {
+    "req_text": "Учебные секции-блоки 1–4 классов должны быть обособленными и непроходными для обучающихся других возрастных групп",
+    "object_entity": "учебные секции-блоки 1–4 классов",
+    "subject_entity": "учебные секции-блоки 1–4 классов",
+    "relation": "является",
+    "applicability": [
+      {
+        "entity": "object_entity",
+        "property": "доступ",
+        "operator": "!=",
+        "value": "другие возрастные группы"
+      }
+    ],
+    "statement": {
+      "property": "доступ",
+      "operator": "!=",
+      "value": "другие возрастные группы",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "7.2.1.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "7.2.1.3"
+    }
+  },
+  {
+    "req_text": "Не допускается устройство входов из рекреаций начальных классов в столовую, актовый зал, спортивно-оздоровительные помещения основной и старшей школы, иные общешкольные и административные помещения",
+    "object_entity": "устройство входов",
+    "subject_entity": "рекреации начальных классов",
+    "relation": "имеет входы в",
+    "applicability": [
+      {
+        "entity": "object_entity",
+        "property": "назначение",
+        "operator": "∈",
+        "value": "столовая, актовый зал, спортивно-оздоровительные помещения основной и старшей школы, иные общешкольные и административные помещения"
+      }
+    ],
+    "statement": {
+      "property": "наличие",
+      "operator": "==",
+      "value": "отсутствует",
+      "type": "requirement"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "7.2.1.3",
+      "document": "СП 251.1325800.2016",
+      "chapter": "7.2.1.3"
+    }
+  },
+  {
+    "req_text": "При проектировании БНК в обособленном здании, размещенном на общем участке с основным зданием ОО, допускается предусматривать сокращенный набор общешкольных помещений",
+    "object_entity": "общешкольные помещения",
+    "subject_entity": "БНК",
+    "relation": "содержит",
+    "applicability": [
+      {
+        "entity": "subject_entity",
+        "property": "тип здания",
+        "operator": "==",
+        "value": "обособленное"
+      },
+      {
+        "entity": "object_entity",
+        "property": "расположение участка",
+        "operator": "==",
+        "value": "общий с основным зданием ОО"
+      }
+    ],
+    "statement": {
+      "property": "набор",
+      "operator": "==",
+      "value": "сокращенный",
+      "type": "assumption"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "7.2.2.4",
+      "document": "СП 251.1325800.2016",
+      "chapter": "7.2.2.4"
+    }
+  },
+  {
+    "req_text": "По заданию на проектирование возможно исключить административные помещения",
+    "object_entity": "административные помещения",
+    "subject_entity": "задание на проектирование",
+    "relation": "позволяет исключить",
+    "applicability": [],
+    "statement": {
+      "property": "наличие",
+      "operator": "!=",
+      "value": "есть",
+      "type": "assumption"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "7.2.2.4",
+      "document": "СП 251.1325800.2016",
+      "chapter": "7.2.2.4"
+    }
+  },
+  {
+    "req_text": "По заданию на проектирование возможно сократить число помещений медблока",
+    "object_entity": "число помещений медблока",
+    "subject_entity": "задание на проектирование",
+    "relation": "определяет",
+    "applicability": [
+      {
+        "entity": "subject_entity",
+        "property": "тип задания",
+        "operator": "==",
+        "value": "проектирование"
+      }
+    ],
+    "statement": {
+      "property": "число помещений",
+      "operator": "<",
+      "value": "стандартное количество",
+      "type": "assumption"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "7.2.2.4",
+      "document": "СП 251.1325800.2016",
+      "chapter": "7.2.2.4"
+    }
+  },
+  {
+    "req_text": "По заданию на проектирование возможно сократить число помещений физкультурно-оздоровительной группы",
+    "object_entity": "число помещений физкультурно-оздоровительной группы",
+    "subject_entity": "задание на проектирование",
+    "relation": "определяет",
+    "applicability": [
+      {
+        "entity": "subject_entity",
+        "property": "наличие",
+        "operator": "==",
+        "value": "есть"
+      }
+    ],
+    "statement": {
+      "property": "наличие",
+      "operator": "==",
+      "value": "сокращено",
+      "type": "assumption"
+    },
+    "external_refs": [],
+    "source": {
+      "paragraph": "7.2.2.4",
+      "document": "СП 251.1325800.2016",
+      "chapter": "7.2.2.4"
+    }
+  }
+]
