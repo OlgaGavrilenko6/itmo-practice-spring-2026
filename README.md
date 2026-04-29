@@ -181,7 +181,7 @@ python baseline.py
 python baseline_new.py
 ```
 
-## Запуск elementary Requirements
+## Запуск elementary_requirements
 ```bash
 python elementary_requirements.ipynb
 ```
@@ -190,7 +190,7 @@ python elementary_requirements.ipynb
 python elementary_applicability.py
 ```
 
-## Запуск agent experiment
+## Запуск agent_experiment
 ```bash
 cd agent_experiment_req
 python main.py
