@@ -21,7 +21,7 @@ itmo-practice-spring-2026/
 │
 ├── README.md
 ├── baseline.py                         # Эксперимент №1 — baseline
-├── agent_applicability.py      # Эксперимент №2 — elementary requirements
+├── agent_applicability.py              # Эксперимент №2 — elementary requirements
 ├── baseline_applicability.py
 ├── baseline_new.py
 ├── elementary_applicability.py 
